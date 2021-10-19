@@ -4,6 +4,7 @@
     {
       "type": "npm",
       "script": "start",
+      "label": "npm: start",
       "isBackground": true,
       "presentation": {
         "focus": true,
