@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TransferenciaServiceService } from '../servives/transferencia-service.service';
 
 @Component({
   selector: 'app-extrato',
@@ -9,7 +10,7 @@ export class Extrato {
   @Input()
   transferencias: any[] = [];
 
-  gravarExtrato(transferencia: any): void {
-    this.transferencias.push(transferencia);
+  constructor(private transferenciaService: TransferenciaServiceService) {
+    this.transferencias = transferenciaService.transferencias;
   }
 }
